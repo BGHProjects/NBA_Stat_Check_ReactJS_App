@@ -1,7 +1,7 @@
 # NBA_Stat_Check_ReactJS_App
-A web app built with React.js that compares stats of NBA players
-Uses React.js and Javscript for frontend/backend
-REST API calls are used for the BallDontLie API (https://www.balldontlie.io/#introduction)
+A web app built with React.js that compares stats of NBA players.
+Uses React.js and Javscript for frontend/backend.
+REST API calls are used for the BallDontLie API (https://www.balldontlie.io/#introduction).
 
 Type in the player name and a season that they played in (in the form of YYYY which represents the year the season started (e.g. 2019 for 19/20 season)), and the app will return that player's Points, Rebounds, Assists, Blocks and Steals for that season to 2 decimal places.
 
