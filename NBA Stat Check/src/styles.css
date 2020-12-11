@@ -1,0 +1,638 @@
+html {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.87),
+      rgba(0, 0, 0, 0.87)
+    ),
+    url(https://images.unsplash.com/photo-1504450758481-7338eba7524a?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=749&q=80);
+  background-size: cover;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.App {
+  font-family: "Kanit", Helvetica;
+  color: white;
+  text-align: center;
+  animation: fadeIn 2s;
+}
+
+.App_Title {
+  font-size: 70px;
+  margin-bottom: -5px;
+}
+
+.wholeThing {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.better {
+  color: #00ff04;
+}
+
+.neutral {
+  color: white;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#playerFull {
+  display: flex;
+  justify-content: space-between;
+}
+
+.player1 {
+  padding-right: 20px;
+  margin-left: 42px;
+  animation: fadeIn 2s;
+}
+
+.player2 {
+  padding-left: 10px;
+  padding-right: 60px;
+  animation: fadeIn 2s;
+}
+
+.playerName {
+  margin-bottom: -30px;
+}
+
+.playerSeason {
+  margin-top: -20px;
+}
+
+#playersearch {
+  font-size: 20px;
+  font-family: "Kanit", Helvetica;
+  text-align: center;
+  width: 300px;
+  height: 40px;
+
+  margin-top: 30px;
+  color: white;
+  background: none;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 3px solid;
+  border-color: white;
+  margin-bottom: 5px;
+}
+
+#playersearch:focus {
+  outline: none;
+  border-color: #00ebe7;
+}
+
+#playersearch:hover {
+  border-color: #00ebe7;
+}
+
+#seasonsearch {
+  font-size: 20px;
+  font-family: "Kanit", Helvetica;
+  text-align: center;
+  width: 300px;
+  height: 40px;
+
+  color: white;
+  background: none;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 3px solid;
+  border-color: white;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+#seasonsearch:hover {
+  border-color: #00ebe7;
+}
+
+#seasonsearch:focus {
+  outline: none;
+  border-color: #00ebe7;
+}
+
+#retrieveButton {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0);
+  font-family: "Kanit", Helvetica;
+  text-align: center;
+  width: 180px;
+  height: 40px;
+  background: white;
+  border-color: none;
+  border-radius: 90px;
+  border-width: 0;
+  background-image: url(https://www.cambodianexpress.com/giant_content/uploads/2019/07/search_icon.png);
+  background-size: 27px 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: hoverOff 0.4s;
+}
+
+#retrieveButton:hover {
+  color: black;
+  background-color: white;
+  background-image: none;
+  animation: hoverOn 0.4s;
+}
+
+.searchAgainButton {
+  position: relative;
+  top: 150px;
+}
+
+.compareContainer {
+  position: relative;
+  top: 150px;
+  padding-left: 15px;
+}
+
+#compareButton {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0);
+  font-family: "Kanit", Helvetica;
+  text-align: center;
+  width: 150px;
+  height: 40px;
+  background: white;
+  border-color: none;
+  border-radius: 90px;
+  border-width: 0;
+  background-image: url(https://cdn3.iconfinder.com/data/icons/abstract-1/512/compare-512.png);
+  background-size: 40px 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: compareOff 0.4s;
+}
+
+#compareButton:hover {
+  color: black;
+  background-color: white;
+  background-image: none;
+  animation: compareOn 0.4s;
+}
+
+#searchAgain {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0);
+  font-family: "Kanit", Helvetica;
+  text-align: center;
+  width: 150px;
+  height: 40px;
+  background: white;
+  border-color: none;
+  border-radius: 90px;
+  border-width: 0;
+  background-image: url(https://www.cambodianexpress.com/giant_content/uploads/2019/07/search_icon.png);
+  background-size: 27px 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: hoverOff 0.4s;
+}
+
+#searchAgain:hover {
+  color: black;
+  background-color: white;
+  background-image: none;
+  animation: hoverOn 0.4s;
+}
+
+#searchAgain:focus {
+  color: black;
+  background-color: white;
+  background-image: none;
+}
+
+@keyframes compareOn {
+  0% {
+    color: rgba(255, 255, 255, 0);
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0)
+      ),
+      url(https://cdn3.iconfinder.com/data/icons/abstract-1/512/compare-512.png);
+  }
+
+  10% {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.1)
+      ),
+      url(https://cdn3.iconfinder.com/data/icons/abstract-1/512/compare-512.png);
+  }
+
+  20% {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.2),
+        rgba(255, 255, 255, 0.2)
+      ),
+      url(https://cdn3.iconfinder.com/data/icons/abstract-1/512/compare-512.png);
+  }
+
+  30% {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.3),
+        rgba(255, 255, 255, 0.3)
+      ),
+      url(https://cdn3.iconfinder.com/data/icons/abstract-1/512/compare-512.png);
+  }
+
+  40% {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.4),
+        rgba(255, 255, 255, 0.4)
+      ),
+      url(https://cdn3.iconfinder.com/data/icons/abstract-1/512/compare-512.png);
+  }
+
+  50% {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0.5)
+      ),
+      url(https://cdn3.iconfinder.com/data/icons/abstract-1/512/compare-512.png);
+  }
+
+  60% {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.6),
+        rgba(255, 255, 255, 0.6)
+      ),
+      url(https://cdn3.iconfinder.com/data/icons/abstract-1/512/compare-512.png);
+  }
+
+  70% {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.7)
+      ),
+      url(https://cdn3.iconfinder.com/data/icons/abstract-1/512/compare-512.png);
+  }
+
+  80% {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0.8)
+      ),
+      url(https://cdn3.iconfinder.com/data/icons/abstract-1/512/compare-512.png);
+  }
+
+  90% {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.9),
+        rgba(255, 255, 255, 0.9)
+      ),
+      url(https://cdn3.iconfinder.com/data/icons/abstract-1/512/compare-512.png);
+  }
+
+  100% {
+    color: black;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 1),
+        rgba(255, 255, 255, 1)
+      ),
+      url(https://cdn3.iconfinder.com/data/icons/abstract-1/512/compare-512.png);
+  }
+}
+
+@keyframes compareOff {
+  0% {
+    color: black;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 1),
+        rgba(255, 255, 255, 1)
+      ),
+      url(https://cdn3.iconfinder.com/data/icons/abstract-1/512/compare-512.png);
+  }
+
+  10% {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.9),
+        rgba(255, 255, 255, 0.9)
+      ),
+      url(https://cdn3.iconfinder.com/data/icons/abstract-1/512/compare-512.png);
+  }
+
+  20% {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0.8)
+      ),
+      url(https://cdn3.iconfinder.com/data/icons/abstract-1/512/compare-512.png);
+  }
+
+  30% {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.7)
+      ),
+      url(https://cdn3.iconfinder.com/data/icons/abstract-1/512/compare-512.png);
+  }
+
+  40% {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.6),
+        rgba(255, 255, 255, 0.6)
+      ),
+      url(https://cdn3.iconfinder.com/data/icons/abstract-1/512/compare-512.png);
+  }
+
+  50% {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0.5)
+      ),
+      url(https://cdn3.iconfinder.com/data/icons/abstract-1/512/compare-512.png);
+  }
+
+  60% {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.4),
+        rgba(255, 255, 255, 0.4)
+      ),
+      url(https://cdn3.iconfinder.com/data/icons/abstract-1/512/compare-512.png);
+  }
+
+  70% {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.3),
+        rgba(255, 255, 255, 0.3)
+      ),
+      url(https://cdn3.iconfinder.com/data/icons/abstract-1/512/compare-512.png);
+  }
+
+  80% {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.2),
+        rgba(255, 255, 255, 0.2)
+      ),
+      url(https://cdn3.iconfinder.com/data/icons/abstract-1/512/compare-512.png);
+  }
+
+  90% {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.1)
+      ),
+      url(https://cdn3.iconfinder.com/data/icons/abstract-1/512/compare-512.png);
+  }
+
+  100% {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0)
+      ),
+      url(https://cdn3.iconfinder.com/data/icons/abstract-1/512/compare-512.png);
+  }
+}
+
+@keyframes hoverOn {
+  0% {
+    color: rgba(255, 255, 255, 0);
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0)
+      ),
+      url(https://www.cambodianexpress.com/giant_content/uploads/2019/07/search_icon.png);
+  }
+
+  10% {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.1)
+      ),
+      url(https://www.cambodianexpress.com/giant_content/uploads/2019/07/search_icon.png);
+  }
+
+  20% {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.2),
+        rgba(255, 255, 255, 0.2)
+      ),
+      url(https://www.cambodianexpress.com/giant_content/uploads/2019/07/search_icon.png);
+  }
+
+  30% {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.3),
+        rgba(255, 255, 255, 0.3)
+      ),
+      url(https://www.cambodianexpress.com/giant_content/uploads/2019/07/search_icon.png);
+  }
+
+  40% {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.4),
+        rgba(255, 255, 255, 0.4)
+      ),
+      url(https://www.cambodianexpress.com/giant_content/uploads/2019/07/search_icon.png);
+  }
+
+  50% {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0.5)
+      ),
+      url(https://www.cambodianexpress.com/giant_content/uploads/2019/07/search_icon.png);
+  }
+
+  60% {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.6),
+        rgba(255, 255, 255, 0.6)
+      ),
+      url(https://www.cambodianexpress.com/giant_content/uploads/2019/07/search_icon.png);
+  }
+
+  70% {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.7)
+      ),
+      url(https://www.cambodianexpress.com/giant_content/uploads/2019/07/search_icon.png);
+  }
+
+  80% {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0.8)
+      ),
+      url(https://www.cambodianexpress.com/giant_content/uploads/2019/07/search_icon.png);
+  }
+
+  90% {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.9),
+        rgba(255, 255, 255, 0.9)
+      ),
+      url(https://www.cambodianexpress.com/giant_content/uploads/2019/07/search_icon.png);
+  }
+
+  100% {
+    color: black;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 1),
+        rgba(255, 255, 255, 1)
+      ),
+      url(https://www.cambodianexpress.com/giant_content/uploads/2019/07/search_icon.png);
+  }
+}
+
+@keyframes hoverOff {
+  0% {
+    color: black;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 1),
+        rgba(255, 255, 255, 1)
+      ),
+      url(https://www.cambodianexpress.com/giant_content/uploads/2019/07/search_icon.png);
+  }
+
+  10% {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.9),
+        rgba(255, 255, 255, 0.9)
+      ),
+      url(https://www.cambodianexpress.com/giant_content/uploads/2019/07/search_icon.png);
+  }
+
+  20% {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0.8)
+      ),
+      url(https://www.cambodianexpress.com/giant_content/uploads/2019/07/search_icon.png);
+  }
+
+  30% {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.7)
+      ),
+      url(https://www.cambodianexpress.com/giant_content/uploads/2019/07/search_icon.png);
+  }
+
+  40% {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.6),
+        rgba(255, 255, 255, 0.6)
+      ),
+      url(https://www.cambodianexpress.com/giant_content/uploads/2019/07/search_icon.png);
+  }
+
+  50% {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0.5)
+      ),
+      url(https://www.cambodianexpress.com/giant_content/uploads/2019/07/search_icon.png);
+  }
+
+  60% {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.4),
+        rgba(255, 255, 255, 0.4)
+      ),
+      url(https://www.cambodianexpress.com/giant_content/uploads/2019/07/search_icon.png);
+  }
+
+  70% {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.3),
+        rgba(255, 255, 255, 0.3)
+      ),
+      url(https://www.cambodianexpress.com/giant_content/uploads/2019/07/search_icon.png);
+  }
+
+  80% {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.2),
+        rgba(255, 255, 255, 0.2)
+      ),
+      url(https://www.cambodianexpress.com/giant_content/uploads/2019/07/search_icon.png);
+  }
+
+  90% {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.1)
+      ),
+      url(https://www.cambodianexpress.com/giant_content/uploads/2019/07/search_icon.png);
+  }
+
+  100% {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0)
+      ),
+      url(https://www.cambodianexpress.com/giant_content/uploads/2019/07/search_icon.png);
+  }
+}
